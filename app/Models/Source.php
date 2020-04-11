@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class Source extends Model
 {
     /**
      * Table Name
      *
      * @var string
      */
-    protected $table = 'status';
+    protected $table = 'source';
 
     /**
-     * Properties of Status table
+     * Properties of Source table
      *
      * @var array
      */

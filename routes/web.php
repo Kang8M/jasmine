@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('status', 'StatusController@index');
+Route::get('status/create', 'StatusController@create');
+Route::post('status/store', 'StatusController@store')->middleware('checkStatus');
+Route::get('status/edit/{id}', 'StatusController@edit');
+Route::put('status/update/{id}', 'StatusController@update')->middleware('checkStatus');
+Route::get('status/delete/{id}', 'StatusController@destroy');
